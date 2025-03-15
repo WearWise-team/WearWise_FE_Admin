@@ -101,7 +101,6 @@ const UserManagement = ({ users, activePage }) => {
       key: "name",
       render: (text, record) => (
         <Space>
-          <Checkbox />
           <Avatar src={record.avatar} icon={<UserOutlined />} />
           <span>{text}</span>
         </Space>
