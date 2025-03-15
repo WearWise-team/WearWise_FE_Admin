@@ -91,6 +91,7 @@ const LineChart = ({ chartId, data, revenueData, labels, title }) => {
         chartInstance.current.destroy();
       }
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, revenueData, labels, title]);
 
   return <canvas id={chartId} ref={chartRef} />;

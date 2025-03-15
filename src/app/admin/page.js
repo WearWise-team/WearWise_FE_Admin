@@ -94,6 +94,7 @@ const Dashboard = () => {
     ) {
       fetchActiveUsers();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activePage]);
 
   useEffect(() => {
@@ -138,6 +139,7 @@ const Dashboard = () => {
       }
     };
     fetchSuppliers();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -160,6 +162,7 @@ const Dashboard = () => {
       }
     };
     fetchOrders();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const renderContent = () => {
