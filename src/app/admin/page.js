@@ -6,6 +6,7 @@ import { getAllUser, getUsersIsDeleted } from "@/api/user/page";
 import { getSuppliers } from "@/api/supplier/page";
 import User from "@/components/User";
 import Supplier from "@/components/Supplier";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 // Hàm lấy 6 tháng gần nhất
 const getLastSixMonths = () => {
@@ -145,7 +146,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/orders");
+        const response = await fetch(`${BASE_URL}/api/orders`);
         const data = await response.json();
         setOrders(data);
         const monthlyOrders = groupByMonth(data, "order_date");
